@@ -9,7 +9,6 @@ typedef struct customer{
     char *phone;
 }CUSTMOR;
 
-
 void save_info(int n,struct customer *p){
     int i,j;
     int len1,len2;
@@ -26,7 +25,9 @@ void save_info(int n,struct customer *p){
         for(j=0;j<5;j++){
             p[i].id[j]=p[i].phone[k];
             k+=1;
-
+        }
+    }
+}
 void print_info(int n,struct customer *p){
     char temp3[5];
     scanf("%s",temp3);
@@ -34,7 +35,6 @@ void print_info(int n,struct customer *p){
     for(i=0;i<n;i++){
         if(strcmp(temp3,p[i].id)==0){
             printf("%s %s %d",p[i].name,p[i].phone,i+1);
-
         }
     }
 }
@@ -47,6 +47,8 @@ int main(void) {
     CUSTMOR *p=NULL;
     p=(CUSTMOR *)malloc(n*sizeof(CUSTMOR));
     
+    save_info(n,p);
+    print_info(n,p);
     free(p);
     
     return 0;
