@@ -33,11 +33,14 @@ KimSooJin 010-1234-5678<br> ParkGilDong 010-2468-1357<br> ChungSangChul 010-1230
 KimSooJin 010-1234-5678<br> ParkGilDong 010-2468-1357<br> ChungSangChul 010-1230-4567<br> LeeYoungHee 010-1357-2468<br> ChoiMyungHee 010-3458-1267 <br>7
 - 출력예시<br>ParkGilDong 010-2468-1357 1<br> ChungSangChul 010-1230-4567 2<br> ChoiMyungHee 010-3458-1267 3
 
-### v3.0<br>
+### v2.1<br>
 - 입력예시<br>5<br>
 KimSooJin 010-1234-5678<br> ParkGilDong 010-2468-1357<br> ChungSangChul 010-1230-4567 <br>LeeYoungHee 010-1357-2468<br> ChoiMyungHee 010-3458-1267<br> 2468
 - 출력예시<br>
 LeeYoungHee 010-1357-2468 2
+
+### v2.1.1<br>
+- c 라이브러리 파일 긴급 수정됨 입력예시 출력예시 v2.1과 동일함
 
 
 *** 
