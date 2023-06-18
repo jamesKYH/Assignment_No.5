@@ -9,6 +9,16 @@ typedef struct customer{
     char *phone;
 }CUSTMOR;
 
+void print_info(int n,struct customer *p){
+    char temp3[5];
+    scanf("%s",temp3);
+    int i;
+    for(i=0;i<n;i++){
+        if(strcmp(temp3,p[i].id)==0){
+            printf("%s %s %d",p[i].name,p[i].phone,i+1);
+        }
+    }
+}
 
 int main(void) {
     //고객 수 입력
