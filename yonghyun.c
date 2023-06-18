@@ -47,20 +47,21 @@ void print_info(int n,struct customer *p){
     int k,i;
      scanf("%d",&k);
      
-     int answer=0;
-     for(i=0;i<n;i++){
-         if(k==(int)atoi(&p[i].id[3])){
-             answer=i;
+    int answer=0;
+    for(i=0;i<n;i++){
+        if(k%10==(int)atoi(&p[i].id[3])){
+            answer=i;
+            break;
+        }
+    }
+      
+    CUSTMOR *q;
+    for(q=p+answer,i=1;q<p+n;q=q->next,i++){
+         if(k==(int)atoi(q->id)){
+             printf("%s %s %d\n",q->name,q->phone,i);
              break;
          }
      }
-    CUSTMOR *q;
-    for(q=p+answer,i=1;q<p+n;q=q->next,i++){
-          printf("%s %s %d\n",q->name,q->phone,i);
-          if(q->next==NULL)break;
-          
-          
-      }
 }
 
 int main(void) {
@@ -77,4 +78,3 @@ int main(void) {
     
     return 0;
 }
-
