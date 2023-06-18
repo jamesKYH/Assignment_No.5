@@ -44,14 +44,23 @@ void save_info(int n,struct customer *p){
      }
 }
 void print_info(int n,struct customer *p){
-    char temp3[5];
-    scanf("%s",temp3);
-    int i;
-    for(i=0;i<n;i++){
-        if(strcmp(temp3,p[i].id)==0){
-            printf("%s %s %d",p[i].name,p[i].phone,i+1);
-        }
-    }
+    int k,i;
+     scanf("%d",&k);
+     
+     int answer=0;
+     for(i=0;i<n;i++){
+         if(k==(int)atoi(&p[i].id[3])){
+             answer=i;
+             break;
+         }
+     }
+    CUSTMOR *q;
+    for(q=p+answer,i=1;q<p+n;q=q->next,i++){
+          printf("%s %s %d\n",q->name,q->phone,i);
+          if(q->next==NULL)break;
+          
+          
+      }
 }
 
 int main(void) {
@@ -68,3 +77,4 @@ int main(void) {
     
     return 0;
 }
+
