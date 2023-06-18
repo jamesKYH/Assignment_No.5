@@ -7,6 +7,7 @@ typedef struct customer{
     char id[5];
     char *name;
     char *phone;
+    struct customer *next;
 }CUSTMOR;
 
 void save_info(int n,struct customer *p){
@@ -21,12 +22,26 @@ void save_info(int n,struct customer *p){
         p[i].phone=(char *)malloc((len2+1)*sizeof(char));
         strcpy(p[i].name,temp1);
         strcpy(p[i].phone,temp2);
-        int k=9;
-        for(j=0;j<5;j++){
-            p[i].id[j]=p[i].phone[k];
+        char temp3[5];
+        int k=0;
+        for(j=9;j<len2;j++){
+            temp3[k]=temp2[j];
             k+=1;
         }
+        temp3[k]='\0';
+        strcpy(p[i].id,temp3);
     }
+    for(i=0;i<n;i++){
+         for(j=i;j<n;j++){
+             if(i!=j&&p[i].id[3]==p[j].id[3]){
+                 p[i].next=p+j;
+                 break;
+             }
+             else if(j==n-1){
+                 p[i].next=NULL;
+             }
+         }
+     }
 }
 void print_info(int n,struct customer *p){
     char temp3[5];

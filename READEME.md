@@ -14,7 +14,7 @@
 
 ### 기능
 - v1.0<br>찾고자 하는 고객번호를 입력하면 해당 고객이 몇번째로 가입했는 지 알려준다.
-
+- v2.0<br>2. 고객 정보 검색 시간 줄이기 위해 고객번호 마지막 숫자가 같은 고객들끼리 포인터로 연결한다. 마지막 숫자가 입력되면 해당 고객이 몇 번째 고객인지 출력
 ***
 
 ### 사용법
@@ -23,7 +23,10 @@
 - 입력예시<br>5<br>
 KimSooJin 010-1234-5678<br> ParkGilDong 010-2468-1357<br> ChungSangChul 010-1230-4567<br> LeeYoungHee 010-1357-2468<br> ChoiMyungHee 010-3458-1267<br>2468
 - 출력예시<br>LeeYoungHee 010-1357-2468 4
-
+### v2.0<br>
+- 입력예시<br>5<br>
+KimSooJin 010-1234-5678<br> ParkGilDong 010-2468-1357<br> ChungSangChul 010-1230-4567<br> LeeYoungHee 010-1357-2468<br> ChoiMyungHee 010-3458-1267 <br>7
+- 출력예시<br>ParkGilDong 010-2468-1357 1<br> ChungSangChul 010-1230-4567 2<br> ChoiMyungHee 010-3458-1267 3
 *** 
 ### 코드 작성시 유의한 점
 - 고객 정보 저장 시 각 정보에 맞는 공간을 동적으로 할당받아 저장하여 메모리 낭비 최소화
